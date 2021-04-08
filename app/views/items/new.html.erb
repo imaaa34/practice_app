@@ -1,1 +1,8 @@
-<h1>このページはnewです</h1>
+<h1>Title</h1>
+
+<%= form_with model: @title, url:'/items', local:true do |f| %>
+  <h4>Name</h4>
+  <%= f.text_field :name %>
+  <h4>Date</h4>
+  <%= f.text_field :sale_date %>
+  <%= f.submit 'Submit' %>
