@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'show' => 'items#show'
   post 'items' => 'items#create'
   post 'new_posts' => 'new_posts#create'
+  get 'new_posts' => 'new_posts#index'
+  get 'new_posts/:id' => 'new_posts#detail', as: 'new_post'
 
 end

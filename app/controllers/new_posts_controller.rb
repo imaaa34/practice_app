@@ -9,9 +9,17 @@ class NewPostsController < ApplicationController
     redirect_to'/show'
   end
 
+  def index
+    @titles = Title.all
+  end
+  
+  def detail
+    @title = Title.find(params[:id])
+  end
+
   private
   def title_params
-    params.require(:title).permit(:name, :sale_date)
+    params.require(:title).permit(:name, :body)
   end
 
 end

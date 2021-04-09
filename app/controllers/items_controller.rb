@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
 
   private
   def title_params
-    params.require(:title).permit(:name, :sale_date)
+    params.require(:title).permit(:name, :body)
   end
 
 end
