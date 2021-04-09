@@ -27,6 +27,12 @@ class NewPostsController < ApplicationController
     redirect_to new_post_path
   end
 
+  def destroy
+    title = Title.find(params[:id])
+    title.destroy
+    redirect_to new_posts_path
+  end
+
   private
   def title_params
     params.require(:title).permit(:name, :body, :image)
