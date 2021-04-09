@@ -2,3 +2,4 @@
 <p><%= @title.name %></p>
 <h2>内容</h2>
 <p><%= @title.body %></p>
+<%= link_to "編集", edit_new_posts_path(@title.id) %>

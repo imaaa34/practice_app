@@ -17,6 +17,16 @@ class NewPostsController < ApplicationController
     @title = Title.find(params[:id])
   end
 
+  def edit
+    @title = Title.find(params[:id])
+  end
+
+  def update
+    title = Title.find(params[:id])
+    title.update(title_params)
+    redirect_to new_post_path
+  end
+
   private
   def title_params
     params.require(:title).permit(:name, :body)

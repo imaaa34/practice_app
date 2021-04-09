@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   post 'new_posts' => 'new_posts#create'
   get 'new_posts' => 'new_posts#index'
   get 'new_posts/:id' => 'new_posts#detail', as: 'new_post'
+  get 'new_posts/:id/edit' => 'new_posts#edit', as: 'edit_new_posts'
+  patch 'new_posts/:id' => 'new_posts#update', as: 'update_new_posts'
 
 end
