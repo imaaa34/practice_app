@@ -4,4 +4,6 @@
   <span>
     <%= link_to title.name, new_post_path(title.id) %>
   </span>
+  <p>画像</p>
+  <%= attachment_image_tag title, :image, :fill, 100, 100, format: 'jpeg' %>
 <% end %>

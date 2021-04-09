@@ -29,7 +29,7 @@ class NewPostsController < ApplicationController
 
   private
   def title_params
-    params.require(:title).permit(:name, :body)
+    params.require(:title).permit(:name, :body, :image)
   end
 
 end
