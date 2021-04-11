@@ -24,7 +24,7 @@ class NewPostsController < ApplicationController
   def update
     title = Title.find(params[:id])
     title.update(title_params)
-    redirect_to new_post_path
+    redirect_to new_post_path(title.id)
   end
 
   def destroy
